@@ -1,9 +1,13 @@
 ### Modelo Predictivo para Diagnóstico del Carcinoma Hepatocelular
-**Descripción:** La meta del proyecto es desarrollar un modelo de Machine Learning capaz de clasificar a los pacientes del hospital Hermanos Ameijeiras según la información contenida en planillas médicas en tres categorías:
+**Descripción:** La meta del proyecto es desarrollar un modelo de Machine Learning capaz de clasificar a los pacientes del hospital Hermanos Ameijeiras según la información contenida en los ultrasonidos.
 
-1. **Tratamiento inmediato:** Diagnóstico confirmado de cáncer de hígado.
-2. **Revisión en tres meses:** Sospecha de cáncer de hígado.
-3. **Revisión en seis meses:** Estado general saludable.
+Los grupos de diagnósticos que tendríamos son:
+
+1. **CHC insertado:** Diagnóstico confirmado de cáncer de hígado.
+2. **CH avanzado/compensado bajo protocolo PIVKA:** Sospecha de cáncer de hígado.(También se incluye CH descompensado).
+3. **CH con causa específica o manifestaciones:** Enfermedades como la de Wilson o HTP/Ascitis.
+4. **Enfermedad hepática crónica (sin CH confirmado):** Por ejemplo Hígado Crónico Multifocal, que es una posible etapa previa al CHC.
+5. **Complicación vascular sospechosa:** Trombosis portal, posiblemente relacionada con CHC o complicación de CH.
 
 ## Obtención de datos
 Inicialmente, el proyecto contó con **planillas estructuradas** que registraban observaciones médicas de los **ultrasonidos**. Estas contenían información detallada sobre cada paciente, marcada según criterios específicos. Sin embargo, su uso para el modelo de ML presentó un problema fundamental:
